@@ -1,0 +1,7 @@
+ctrl + i -> format document
+ctrl + b -> indent line
+ctrl + u -> outindent line
+ctrl + d -> delete line
+ctrl + p -> pesquisar arquivo
+ctrl + ç -> documentation
+ctrl + k -> coments
