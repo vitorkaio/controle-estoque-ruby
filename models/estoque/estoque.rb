@@ -43,7 +43,7 @@ class Estoque
     for cel in @celulares
       puts cel.toString()
     end
-    puts quantidade()
+    puts "Celulares: #{quantidade()}"
   end
 
   def quantidade()

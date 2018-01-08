@@ -27,7 +27,7 @@ class Prompt
       enter = gets()
       case tipo
       when 1
-        entrada = enter
+        entrada = enter.delete("\n")
       when 2
         entrada = enter.to_i()
         # redo volta o loop mais interno

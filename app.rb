@@ -4,7 +4,10 @@ require "./models/auxiliar/prompt"
 
 require "./constantes/const"
 
+# para teste
 $estoque = Estoque.new()
+c = Celular.new("LG", "l90", 450.50, 'lgl12390', false)
+$estoque.insereCelular(c)
 
 # ************************** Fluxo $estoque **************************
 
