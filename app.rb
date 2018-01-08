@@ -30,8 +30,10 @@ class Operacoes
     modelos.length().times do |contador|
       Prompt.output("#{contador + 1} - #{modelos[contador]}")
     end
+
     msg = "#{modelos.length() + 1} - Para cancelar\nOp: "
     op = Prompt.input(2, msg, false)
+
     return op == modelos.length() + 1 ? false : modelos[op - 1]
   end
 
@@ -49,33 +51,40 @@ loop do
   break if menu == 5
 
   case menu
+
   when 1  
     Prompt.limpa()
     cel = Operacoes.adicionaCelular()
     $estoque.insereCelular(cel)
     Prompt.output("Celular adicionado!")
     Prompt.pausa()
+
   when 2
     Prompt.limpa()
     Prompt.output(Const::REMOVER)
+    
     modelo = Operacoes.removeCelular()
-    puts "Modelo a ser removido: #{modelo}"
     next if modelo == false
+
     if $estoque.removeCelular(modelo) == true
       Prompt.output("Celular removido!")
     else
       Prompt.output("Não foi possível remover o celular!")
     end
+
     Prompt.pausa()
+
   when 3
     Prompt.limpa()
     Prompt.output(Const::ALTERAR)
     Prompt.pausa()
+
   when 4
     Prompt.limpa()
     Prompt.output(Const::LISTAR)
     $estoque.toString()
     Prompt.pausa()
+
   else
     Prompt.limpa()
     Prompt.output(Const::OPINVALIDA)
