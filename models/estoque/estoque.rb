@@ -46,6 +46,9 @@ class Estoque
     puts "Celulares: #{quantidade()}"
   end
 
+  # Define metódos privados.
+  private
+
   def quantidade()
     return @celulares.length()
   end

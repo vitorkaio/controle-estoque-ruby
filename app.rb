@@ -45,6 +45,8 @@ loop do
 
   Prompt.output(Const::ESTOQUE)
 
+  #puts $estoque.quantidade()
+
   print "1.Adicionar\n2.Remover\n3.Alterar\n4.Listar\n5.Sair\nOp: "
   menu = gets.to_i()
 
